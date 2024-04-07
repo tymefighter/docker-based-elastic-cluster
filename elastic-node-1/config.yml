@@ -1,0 +1,4 @@
+cluster.name: test-elastic-cluster
+node.name: master-1
+cluster.initial_master_nodes: ["master-1"]
+network.host: 0.0.0.0

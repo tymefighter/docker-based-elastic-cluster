@@ -1,0 +1,19 @@
+services:
+  elastic-node-1:
+    build: ./elastic-node-1
+
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+  elastic-node-2:
+    build: ./elastic-node-2
+
+    depends_on:
+      - elastic-node-1
+
+  kibana:
+    build: ./kibana
+
+    ports:
+      - 5601:5601
